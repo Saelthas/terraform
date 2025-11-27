@@ -1,0 +1,37 @@
+# Archivos de estado
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.*
+
+# Archivos de respaldo generados por Terraform
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+
+# Carpetas generadas automáticamente
+.terraform/
+.terraform/*
+.terraform.lock.hcl
+
+# Archivos de salida sensibles
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Planes (no deberían subirse)
+*.plan
+
+# Archivos sensibles locales
+secret.auto.tfvars
+terraform.tfvars
+*.key
+*.pem
+
+# Archivos de IDE/Editor (opcional)
+.vscode/
+.idea/
+*.swp
+*.swo
