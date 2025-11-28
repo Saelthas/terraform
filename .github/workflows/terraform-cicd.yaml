@@ -70,7 +70,7 @@ jobs:
           echo "Ejecutando acción: $TF_ACTION"
           if [ "$TF_ACTION" = "apply" ]; then
             terraform apply -auto-approve
-          elif [ "$TF_ACTION" = "destroy" ]; then
+          elseif [ "$TF_ACTION" = "destroy" ]; then
             terraform destroy -auto-approve
           else
             echo "Valor inválido para TF_ACTION: $TF_ACTION"
