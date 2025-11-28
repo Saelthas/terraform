@@ -3,14 +3,14 @@ name: 'Terraform Course Pipeline'
 on:
   push:
     branches:
-      - dev
-      - main
+      #- dev
+      - master
     paths:
     - '09-practica/**'
     - '.github/workflows/terraform-cicd.yaml'
 env: 
     TF_VERSION: '1.13.5'
-    TF_ACTION: 'apply'
+    TF_ACTION: 'destroy'
     WORKING_DIR: '09-practica'
 jobs:
   terraform:
@@ -75,4 +75,4 @@ jobs:
           else
             echo "Valor inválido para TF_ACTION: $TF_ACTION"
             exit 1
-          fi
+          fin
