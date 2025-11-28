@@ -9,9 +9,14 @@
 resource "azurerm_resource_group" "rg" {
   name     = "rAruzamen-rg-${terraform.workspace}"
   location = "eastus"
-  tags = {
-    Project     = "Terraform"
-    Owner       = "rAruzamen"
-    Environment = "Dev"
-  }
+  tags     = var.common_tags
+}
+
+resource "azurerm_virtual_network" "vnet_terraform" {
+  name                = var.vnet_name
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  address_space       = [var.addres_space[0]]
+
+  tags = var.common_tags
 }
