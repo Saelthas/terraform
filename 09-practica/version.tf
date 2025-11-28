@@ -1,10 +1,10 @@
 terraform {
   backend "azurerm" {
-    
-    resource_group_name = "rg-tf-state-rAruzamen"
+
+    resource_group_name  = "rg-tf-state-rAruzamen"
     storage_account_name = "sacstate88383"
-    container_name = "tfstate"
-    key = "workspaces/terraform.tfstate"
+    container_name       = "tfstate"
+    key                  = "workspaces/terraform.tfstate"
   }
   required_providers {
     azurerm = {
