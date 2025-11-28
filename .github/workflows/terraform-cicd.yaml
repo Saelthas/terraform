@@ -46,3 +46,4 @@ jobs:
         run: |
           echo "La rama es: $GITHUB_REF"
           echo "El entorno detectado es: $ENVIRONMENT"
+          
