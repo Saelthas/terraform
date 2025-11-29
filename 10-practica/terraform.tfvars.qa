@@ -1,0 +1,7 @@
+common_tags = {
+  Project     = "Terraform"
+  Owner       = "rAruzamen"
+  Environment = "Qa"
+}
+vnet_name= "rAruzamen-Qa-net"
+addres_space = ["20.0.0.0/16"]
